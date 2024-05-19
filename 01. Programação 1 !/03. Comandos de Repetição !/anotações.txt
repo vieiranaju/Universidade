@@ -1,0 +1,37 @@
+while (laço) executa se estiver dentro da condição 
+
+while(not edge) {
+
+run();
+}
+
+- parou
+
+_____________________________________
+
+do-while - executa os comandos uma vez e testa depois 
+
+do {
+run();
+
+} while(not edge);
+
+- caiu
+
+_____________________________________
+
+for(variavel de controle/inicialização; expressão condicional; incrementos;){
+
+<bloco de comandos>
+
+}
+
+_____________________________________
+
+contador (i = 0; ... i++;) 
+-> variavel de controle
+
+_____________________________________
+
+setbuf(stdin,null); 
+ stdout <-'
