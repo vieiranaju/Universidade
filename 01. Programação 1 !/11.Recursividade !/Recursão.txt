@@ -1,0 +1,49 @@
+.=============.
+|Recursão em C|
+'============='
+
+'-> Uma função que chama a si mesma 
+
+-> dividir um problema maior em problemas menores
+	'-> aumenta a clareza e a simplicidade do codigo 
+	'-> ocupa mais memoria e tempo
+
+Exemplo 1 -> Fatorial
+
+void fatorial (float num){
+
+fat = 1;
+	
+	while (num > 1){
+	
+	fat*= n;
+	n--;
+	}
+
+
+---------------------------------------------------------
+
+int fatorial (int n){
+
+	if(n==0)
+	    return 1;
+	else
+	    return n * fatorial(n-1);
+
+}
+
+int main (){
+
+int x;
+printf("valor:");
+scanf("%d", &x);
+
+
+printf("Fatorial de %d = %d\n", x, fatorial(x));
+
+return 0;
+}
+
+
+
+

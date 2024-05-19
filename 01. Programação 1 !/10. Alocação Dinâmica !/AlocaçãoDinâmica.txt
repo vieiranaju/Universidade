@@ -1,0 +1,41 @@
+Ponteiros e Alocação Dinâmica de Memória
+
+	.-> nem sempre o quanto será utilizado é previsivel
+-> espaços para dados que serão armazenados
+	'-> variaveis 
+	      | |   '-> declarada antes do uso
+	      | '-> globais e estaticas -> enquanto o programa estiver sendo executado
+	      '-> locais -> 
+	
+
+Array -> é possivel utilizar um ponteiro como se fosse um vetor
+
+#define MAX 100 -> constante
+		    '-> a cada alteração é necessario recompilar o programa
+
+'-> com ponteiros é possivel alocar memoria conforme necessario
+	'-> sob denmanda
+		'-> gasta mais processamento no entanto
+	'-> espaço permanece reservado até ser liberado
+						| '-> disponivel para outros usos
+						'-> se não for liberado permanece alocado
+						  até finalizar o programa
+-> Quando uma função é executada
+	'-> variaveis locais
+		'-> pilha de execução 
+
+stdlib.h <- biblioteca para o uso de alocação dinamica
+
+-  void *malloc( unsigned int num ); -> alocar espaço para valores de qualquer tipo
+										'-> recebe de
+										    parametro 
+
+int *p;
+p = (int *) malloc(100*sizeof(int));
+			'-> retorna a quantidade em bytes necessaria 
+				'-> sizeof(nomeVariavel); -> sizeof(i);
+				'-> sizeof(tipoVariavel); -> sizeof(int);
+
+- calloc()
+- 
+	

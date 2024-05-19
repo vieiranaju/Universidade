@@ -1,0 +1,185 @@
+structs -> estruturas
+'-> formas de armazenar dados heterogeneos 
+	'-> mais tipos de variavel, armazenados em uma só
+
+cliente
+
+- codigo {int}
+- nome   {string}
+- diaNas {int}
+- mesNas {int}
+- anoNas {int}
+
+ ____________________
+| Sintaxe/Declaração |
++====================+
+
+Structs cliente {
+
+	int codigo;
+	char nome[50];
+	int diaNasc;
+
+
+}c1, c2; 
+  '-> variavel do tipo cliente 
+
+
+structs cliente c1, c2; -> Definindo individualmente 
+
+ __________________
+|  Como Acessar?   |
++==================+
+     '-> atribuir valores
+
+c1. codigo = 101;
+c1. nome = "felps"
+c1. diaNasc = 10;
+  '-> ponto para indicar o que deseja acessar
+
+printf("%d", c1.codigo);
+
+ ______________________________
+| Iniciar durante a declaração |
++==============================+
+
+structs cliente c1 = { 101, "felps", 10 };
+		
+
+ __________________
+|  Onde Declarar?  |
++==================+
+
+'-> fora da função main !
+
+
+ __________________________
+| Aninhamento de Estrutura |
++==========================+
+
+
+struct Data {
+
+	int diaNasc;
+	int mesNasc;
+	int anoNasc;
+
+};
+
+struct cliente {
+
+	int codigo;
+	char nome[50];
+	struct Data data;
+	int sexo;
+
+};
+
+int main(){
+
+    struct cliente c[50];
+
+
+    for (int i = 0; i < n; i++) {
+       
+        scanf("%d", &c[i].data.diaNasc);
+        scanf("%d", &c[i].data.mesNasc);
+        scanf("%d", &c[i].data.anoNasc);
+    }
+
+    for (int i = 0; i < n; i++) {
+        printf("Cliente %d nasceu em %d / %d / %d \n", i+1, c[i].data.diaNasc, c[i].data.mesNasc, c[i].data.anoNasc);
+    }
+
+    return 0; 
+
+}
+
+ ______________________________
+| Atribuição entre estruturas  |
++==============================+
+
+struct ponto {
+
+	int x;
+	int y;
+
+};
+
+struct novoPonto {
+
+	int x;
+	int y;
+
+};
+
+int main(){
+
+	struct ponto p1 = {1, 2};
+	struct ponto p2;
+	struct novoPonto p3 = {2, 3}
+	p2 = p1; \\ok
+
+	printf("p2 = { %d , %d }\n", p2.x, p2.y);
+
+	\\p2 = p3; -> estruturas diferentes, não funciona
+
+
+return 0;
+}
+
+ ________________________________________________
+| Passagem de Estruturas como Parâmetro de Função|
++================================================+
+
+//passagem por valor
+
+void imprime(struct ponto p){
+
+	printf("{ %d , %d }\n", p.x, p.y);
+
+}
+
+
+
+//passagem por referencia
+
+void insere(struct ponto *p){
+
+	scanf("%d %d", &p -> x, &p -> y);
+
+}
+
+int main(){
+	struct ponto pi;
+	imprime(pi);
+	insere(&pi);
+
+return 0;
+}
+
+ __________________________
+| Retornando uma Estrutura |
++==========================+
+
+struct ponto insere(void){
+
+	struct ponto p;
+	scanf("%d %d", &p -> x, &p -> y);
+	
+	return p;
+}
+
+ ___________
+|  Typedet  |
++===========+
+'-> Cria um apelido para tipos ja existentes 
+
+struct ponto {
+
+	int x;
+	int y;
+
+};
+
+typedet struct Ponto ponto;
