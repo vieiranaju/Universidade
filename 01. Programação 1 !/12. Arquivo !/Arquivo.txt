@@ -1,0 +1,31 @@
+Arquivo em C
+
+Armazennamento de dados em memorias 
+'-> velocidade
+'-> facil acesso
+'-> muitos dados podem ser armazenados
+
+FILE *nomeponteiro
+'-> ponteiro controla o fluxo de leitura do arquivo
+
+tipos de arquivo 
+'-> Texto e Binario 
+	'-> extensão não muda o tipo, apenas define o SO
+
+'-> Armazena da forma que seriam impressos na tela 
+	'->Etapa de conversão
+		'-> Arquivos geralmente menores
+		'-> mais rapido
+		'-> não funciona com editor de textos {dificilta alteração}
+
+
+FILE *fopen(char *nomeArquivo, char *modoAbertura);
+		'-> retorna um ponteiro para o arquivo caso aberto
+		'-> null caso de errado
+
+int fclose(FILE *nomeArquivo);
+		'-> Fecha arquivo
+
+int fgetc(arq)
+
+fputs() -> gravar uma string
