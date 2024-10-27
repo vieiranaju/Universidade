@@ -1,0 +1,5 @@
+S -> BaS | BA | @
+A -> aA | a | @
+B -> bS | A | bb
+C -> Ba | EDb
+D -> c | d | @

@@ -1,0 +1,28 @@
+
+Etapa 1: Gramática original
+S -> BaS | BA | @
+A -> aA | a | @
+B -> bS | A | bb
+C -> Ba | EDb
+D -> c | d | @
+
+Etapa 2: Símbolos inúteis/inalcançáveis
+S -> BA
+A -> aA | a
+B -> A | bb
+C -> Ba
+D -> c | d
+
+Etapa 3: Produções vazias
+S -> BA
+A -> aA | a
+B -> A | bb
+C -> Ba
+D -> c | d
+
+Etapa 4: Substituição de produções
+S -> BA
+A -> aA | a
+B -> bb
+C -> Ba
+D -> c | d

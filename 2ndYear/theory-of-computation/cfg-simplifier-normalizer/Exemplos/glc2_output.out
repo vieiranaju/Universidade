@@ -1,0 +1,17 @@
+
+Etapa 1: Gramática original
+S -> aXa | bXb | @
+X -> a | b | Y
+Y -> @
+
+Etapa 2: Símbolos inúteis/inalcançáveis
+S -> aXa | bXb
+X -> a | b
+
+Etapa 3: Produções vazias
+S -> aXa | bXb
+X -> a | b
+
+Etapa 4: Substituição de produções unitárias
+S -> aXa | bXb
+X -> a | b
