@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.maquinacoxinha.PrincipalController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="440.0" layoutX="152.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../Downloads/⟩︙%20Header%20RED%20%20%25.jpeg" />
+         </image></ImageView>
+      <TextField fx:id="campoEstoque" layoutX="152.0" layoutY="283.0" prefHeight="52.0" prefWidth="103.0" />
+      <Button layoutX="24.0" layoutY="48.0" mnemonicParsing="false" onAction="#abastecer" prefHeight="52.0" prefWidth="84.0" text="Abastecer" />
+      <Button layoutX="24.0" layoutY="186.0" mnemonicParsing="false" onAction="#vender" prefHeight="52.0" prefWidth="84.0" text="Vender" />
+      <Button layoutX="24.0" layoutY="255.0" mnemonicParsing="false" onAction="#venderUm" prefHeight="52.0" prefWidth="84.0" text="Vender 1" />
+      <TextField fx:id="campoEntrada" layoutX="24.0" layoutY="117.0" prefHeight="52.0" prefWidth="84.0" />
+      <Button layoutX="24.0" layoutY="322.0" mnemonicParsing="false" onAction="#zerar" prefHeight="52.0" prefWidth="84.0" text="Zerar" />
+      <Text layoutX="152.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantia de Coxinhas" />
+      <Text layoutX="245.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maquina de Coxinha" wrappingWidth="109.3828125" />
+      <Button layoutX="539.0" layoutY="12.0" minWidth="47.0" mnemonicParsing="false" onAction="#sair" prefHeight="31.0" prefWidth="47.0" text="Sair" />
+   </children>
+</AnchorPane>
