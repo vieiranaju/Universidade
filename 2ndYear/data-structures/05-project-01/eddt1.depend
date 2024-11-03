@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1720387194 source:c:\users\vieir\onedrive\documentos\importantes\faculdade\02\estrutura de dados\eddt1\estoque.c
+	"estoque.h"
+	<stdlib.h>
+	<string.h>
+
+1721323190 c:\users\vieir\onedrive\documentos\importantes\faculdade\02\estrutura de dados\eddt1\estoque.h
+	<stdio.h>
+
+1720385036 source:c:\users\vieir\onedrive\documentos\importantes\faculdade\02\estrutura de dados\eddt1\trabalho1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estoque.h"
+
+1720216819 c:\users\vieir\onedrive\documentos\importantes\faculdade\02\estrutura de dados\eddt1\estoque.c
+	"estoque.h"
+	<stdlib.h>
+
+1720387194 source:c:\users\vieir\onedrive\documentos\importantes\faculdade\02\estrutura de dados\05. trabalho 01 !\estoque.c
+	"estoque.h"
+	<stdlib.h>
+	<string.h>
+
+1721323190 c:\users\vieir\onedrive\documentos\importantes\faculdade\02\estrutura de dados\05. trabalho 01 !\estoque.h
+	<stdio.h>
+
+1720385036 source:c:\users\vieir\onedrive\documentos\importantes\faculdade\02\estrutura de dados\05. trabalho 01 !\trabalho1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"estoque.h"
+
