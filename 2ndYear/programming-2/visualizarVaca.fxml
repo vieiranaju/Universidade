@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalhofinal.VisualizarVacasController">
+   <children>
+      <ButtonBar layoutY="360.0" prefHeight="40.0" prefWidth="600.0" />
+      <Text layoutX="32.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visualizar Vacas">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <MenuBar layoutX="-2.0" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Menu">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#AbrirMenu" text="Voltar ao Menu" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ComboBox fx:id="comboRacaFiltro" layoutX="32.0" layoutY="113.0" prefWidth="150.0" />
+      <TableView fx:id="tabelaVacas" layoutX="32.0" layoutY="150.0" prefHeight="223.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="colunaVacaBrinco" prefWidth="123.0" text="Brinco" />
+          <TableColumn fx:id="colunaVacaNome" prefWidth="212.0" text="Nome" />
+            <TableColumn fx:id="colunaVacaRaca" prefWidth="198.0" text="Raça" />
+        </columns>
+      </TableView>
+      <Text layoutX="32.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtrar por Raça" />
+      <Button layoutX="198.0" layoutY="113.0" mnemonicParsing="false" onAction="#filtrarPorRaca" text="Buscar" />
+   </children>
+</AnchorPane>

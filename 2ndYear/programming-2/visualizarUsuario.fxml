@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trabalhofinal.VisualizarUsuariosController">
+   <children>
+      <ButtonBar layoutY="360.0" prefHeight="40.0" prefWidth="600.0" />
+      <Text layoutX="32.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visualizar Usuarios">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <MenuBar layoutX="-2.0" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Menu">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#AbrirMenu" text="Voltar ao Menu" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tabelaUsuarios" layoutX="32.0" layoutY="84.0" prefHeight="289.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="colunaUsuarioLogin" prefWidth="265.0" text="Login" />
+          <TableColumn fx:id="colunaUsuarioNome" prefWidth="268.0" text="Nome" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
