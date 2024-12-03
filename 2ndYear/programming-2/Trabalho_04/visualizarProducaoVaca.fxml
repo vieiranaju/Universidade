@@ -47,7 +47,8 @@
       <Text layoutX="375.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filtrar por Mês" />
       <ComboBox fx:id="comboMesesFiltro" layoutX="375.0" layoutY="113.0" prefHeight="25.0" prefWidth="129.0" />
       <Button layoutX="515.0" layoutY="113.0" mnemonicParsing="false" onAction="#filtrarProducoesPorMes" text="Buscar" />
-      <TextField fx:id="campoTotalProducao" layoutX="375.0" layoutY="48.0" prefHeight="25.0" prefWidth="129.0" />
-      <Text layoutX="375.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de Produção" />
+      <TextField fx:id="campoTotalProducao" layoutX="437.0" layoutY="48.0" prefHeight="25.0" prefWidth="129.0" />
+      <Text layoutX="440.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de Produção" />
+      <Button layoutX="477.0" layoutY="77.0" mnemonicParsing="false" onAction="#filtrarProducoesPorVacaEMes" text="Vaca por Mês" />
    </children>
 </AnchorPane>

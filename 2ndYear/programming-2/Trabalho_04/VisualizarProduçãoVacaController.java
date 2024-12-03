@@ -3,6 +3,7 @@ package com.trabalhofinal;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Locale;
+import java.util.Map;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -158,6 +159,43 @@ public class VisualizarProduçãoVacaController {
             .mapToDouble(Producao::getQuantidade)
             .sum();
         campoTotalProducao.setText(String.format("%.2f", total));
+    }
+    
+    @FXML
+    public void filtrarProducoesPorVacaEMes() {
+        String mesSelecionado = comboMesesFiltro.getValue();
+        String brincoSelecionado = comboBrincoFiltro.getValue();
+
+        if (mesSelecionado == null || mesSelecionado.isEmpty()) {
+            mostrarAlerta(AlertType.WARNING, "Atenção", "Selecione um mês para filtrar.");
+            return;
+        }
+
+        if (brincoSelecionado == null || brincoSelecionado.isEmpty()) {
+            mostrarAlerta(AlertType.WARNING, "Atenção", "Selecione um brinco para filtrar.");
+            return;
+        }
+
+        ObservableList<Producao> producoesFiltradas = FXCollections.observableArrayList(
+            producaoDao.listarTodos().stream()
+                .filter(producao -> {
+                    if (producao.getVacaBrinco() != null && producao.getData() != null) {
+                        LocalDate dataProducao = producao.getData();
+                        String mesProducao = dataProducao.getMonth().getDisplayName(TextStyle.FULL, Locale.getDefault());
+                        return producao.getVacaBrinco().equalsIgnoreCase(brincoSelecionado) &&
+                               mesProducao.equalsIgnoreCase(mesSelecionado);
+                    }
+                    return false;
+                })
+                .collect(Collectors.toList())
+        );
+
+        if (producoesFiltradas.isEmpty()) {
+            mostrarAlerta(AlertType.INFORMATION, "Informação", "Nenhuma produção encontrada para a vaca e mês selecionados.");
+        }
+
+        tabelaProducao.setItems(producoesFiltradas);
+        atualizarTotalProducao(producoesFiltradas);
     }
 
     private void mostrarAlerta(AlertType tipo, String titulo, String mensagem) {
