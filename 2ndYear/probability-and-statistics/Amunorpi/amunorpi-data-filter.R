@@ -6,7 +6,7 @@ setwd("C:\\Users\\vieir\\Downloads\\Amunorpi")
 # ===============================
 # Processando: 0_Municipios_Amunorpi_e_Dados_IBGE.csv
 # ===============================
-Municipios_Amunorpi <- read.csv("Municipios_Amunorpi_e_Curitiba.csv", sep = ";", dec = ",")
+Municipios_Amunorpi <- read.csv("Municipios_Amunorpi.csv", sep = ";", dec = ",")
 Municipios_Amunorpi <- Municipios_Amunorpi %>%
   select("Código.IBGE.Município")  # Mantendo apenas a coluna de código IBGE
 
