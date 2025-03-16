@@ -25,7 +25,7 @@ This repository contains a collection of exercises, activities, and assignments 
 | `14-tree-balancing` | Tree balancing techniques (e.g., AVL trees). |
 | `15-activity-05` | Practical activity 05. |
 | `16-hash` | Hashing concepts and implementation of hash tables. |
-| `17-final-assignment` | Final project or assignment related to the course. |
+| `17-final-assignment` | Fourth graded assignment. |
 
 ---
 
